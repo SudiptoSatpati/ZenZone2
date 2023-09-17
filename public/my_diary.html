@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenZone - My Diary</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom CSS styles here */
+    body {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #e5e7e9;
+      background-image: url("resource8.avif");
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+      font-size: 48px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      background-image: url("resource8.avif");
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .diary-page {
+      margin-top: 30px;
+    }
+
+    .diary-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .diary-title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .diary-subtitle {
+      font-size: 18px;
+      color: #888;
+    }
+
+    .diary-entry {
+      margin-bottom: 30px;
+      background-color: #fff;
+      background-image: url("resource15.jpg");
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .diary-entry textarea {
+      width: 100%;
+      min-height: 200px;
+      border: none;
+      outline: none;
+      resize: none;
+      font-family: "Arial", sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      padding: 10px;
+      color: #333;
+    }
+
+    .diary-entry-actions {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    .diary-entry-actions button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+
+    .diary-entry-actions button:hover {
+      background-color: #0056b3;
+    }
+
+    .saved-entries {
+      margin-top: 30px;
+    }
+
+    .saved-entry {
+      background-color: #fff;
+      background-image: url("resource15.jpg");
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .saved-entry-content {
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+
+    .saved-entry-actions {
+      text-align: right;
+    }
+
+    .saved-entry-actions button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+
+    .saved-entry-actions button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" style="color: #007bff;" href="index.html">ZenZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="color: #007bff;" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="dot-options"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="acheivements.html">Your Achievements</a></li>
+              <li><a class="dropdown-item" href="depression-status.html">Depression Status</a></li>
+              <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+              <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+              <!-- Add more options here -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Diary Page -->
+  <div class="container">
+    <div class="diary-page">
+      <div class="diary-header">
+        <h1 class="diary-title">My Diary</h1>
+        <p class="diary-subtitle" style="color: black;">Write down your thoughts, feelings, and experiences.</p>
+      </div>
+
+      <div class="diary-entry">
+        <textarea id="diary-entry-textarea" placeholder="Start writing here..."></textarea>
+        <div class="diary-entry-actions">
+          <button id="save-entry-button">Save Entry</button>
+        </div>
+      </div>
+
+      <div class="saved-entries">
+        <h2 class="diary-title">Saved Entries</h2>
+        <div id="saved-entries-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Function to save the diary entry
+    function saveEntry() {
+      const textarea = document.getElementById("diary-entry-textarea");
+      const entry = textarea.value;
+
+      // Create a unique key for the entry based on current timestamp
+      const timestamp = Date.now();
+      const key = "entry_" + timestamp;
+
+      // Save the entry to local storage
+      localStorage.setItem(key, entry);
+
+      // Clear the textarea
+      textarea.value = "";
+
+      // Display the saved entry
+      displayEntry(key, entry);
+    }
+
+    // Function to display a saved entry
+    function displayEntry(key, entry) {
+      const savedEntriesContainer = document.getElementById("saved-entries-container");
+
+      // Create the container for the saved entry
+      const savedEntryContainer = document.createElement("div");
+      savedEntryContainer.classList.add("saved-entry");
+
+      // Create the content of the saved entry
+      const savedEntryContent = document.createElement("div");
+      savedEntryContent.classList.add("saved-entry-content");
+      savedEntryContent.textContent = entry;
+
+      // Create the actions for the saved entry
+      const savedEntryActions = document.createElement("div");
+      savedEntryActions.classList.add("saved-entry-actions");
+
+      // Create the button to delete the saved entry
+      const deleteButton = document.createElement("button");
+      deleteButton.classList.add("btn");
+      deleteButton.classList.add("btn-primary");
+      deleteButton.textContent = "Delete";
+      deleteButton.addEventListener("click", function () {
+        // Remove the entry from local storage
+        localStorage.removeItem(key);
+        // Remove the saved entry from the display
+        savedEntryContainer.remove();
+      });
+
+      // Append the content and actions to the saved entry container
+      savedEntryContainer.appendChild(savedEntryContent);
+      savedEntryActions.appendChild(deleteButton);
+      savedEntryContainer.appendChild(savedEntryActions);
+
+      // Append the saved entry container to the container
+      savedEntriesContainer.appendChild(savedEntryContainer);
+    }
+
+    // Load saved entries from local storage
+    function loadSavedEntries() {
+      const savedEntriesContainer = document.getElementById("saved-entries-container");
+
+      // Iterate over the local storage keys
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        // Check if the key starts with "entry_"
+        if (key.startsWith("entry_")) {
+          const entry = localStorage.getItem(key);
+          // Display the saved entry
+          displayEntry(key, entry);
+        }
+      }
+    }
+
+    // Event listener for the save entry button
+    const saveEntryButton = document.getElementById("save-entry-button");
+    saveEntryButton.addEventListener("click", saveEntry);
+
+    // Load saved entries when the page is loaded
+    loadSavedEntries();
+  </script>
+</body>
+
+</html>

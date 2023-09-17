@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User Profile</title>
+	<style>
+        body {
+            background-image: url("bckimg1.avif");
+        }
+		.container {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		h2 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.profile-details {
+			display: flex;
+			align-items: center;
+		}
+
+		.profile-photo {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-right: 20px;
+		}
+
+		.profile-photo img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.profile-info {
+			flex: 1;
+		}
+
+		.profile-info p {
+			margin: 10px 0;
+		}
+
+		.upload-button {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			font-size: 14px;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+
+		.upload-button:hover {
+			background-color: #45a049;
+		}
+
+		.upload-input {
+			display: none;
+		}
+
+		.navigation {
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		.navigation a {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: #fff;
+			text-decoration: none;
+			border-radius: 4px;
+			margin-right: 10px;
+		}
+
+		.navigation a:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>User Profile</h2>
+
+		<div class="profile-details">
+			<div class="profile-photo">
+				<img src="resource9.png" alt="Profile Picture">
+			</div>
+			
+			<div class="profile-info">
+				<p><strong>Name:</strong> Salmon Voi</p>
+				<p><strong>Email:</strong> bhaiyajaan@gmail.com</p>
+				<p><strong>Age:</strong> 55</p>
+				<p><strong>Gender:</strong> Male</p>
+				<p><strong>Location:</strong> Mumbai</p>
+				<p><strong>Interests:</strong> Being heart broken</p>
+				<!-- Add more user details here -->
+			</div>
+		</div>
+
+		<input type="file" id="upload-input" class="upload-input">
+		<label for="upload-input" class="upload-button">Upload Profile Picture</label>
+
+		<div class="navigation">
+			<a href="home.html">Go to Home Page</a>
+			<a href="community.html">Go to Community</a>
+		</div>
+	</div>
+</body>
+</html>

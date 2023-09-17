@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Hub</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .navbar {
+      background-color: #fff;
+      background-image: url("resource8.avif");
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 48px;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      background-image: url("resource8.avif");
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .community-page {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      background-image: url("resource17.jpg");
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .community-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .community-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f7f3f3;
+    }
+
+    .community-options {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .community-option {
+      position: relative;
+      flex-basis: 30%;
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      background-image: url("resource8.avif");
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .community-option:hover {
+      transform: scale(1.05);
+    }
+
+    .community-option-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .community-option-description {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      padding: 10px;
+      background-color: #fff;
+      background-image: url("resource8.avif");
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+
+    .community-option:hover .community-option-description {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">ZenZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="color: black;" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="dot-options"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="acheivements.html">Your Achievements</a></li>
+              <li><a class="dropdown-item" href="depression-status.html">Depression Status</a></li>
+              <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+              <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+              <!-- Add more options here -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Community Page -->
+  <div class="container community-page">
+    <div class="community-header">
+      <h1 class="community-title">Community Hub</h1>
+    </div>
+
+    <div class="community-options">
+      <a href="personal-chat.html" class="community-option">
+        <h2 class="community-option-title">Personal Chat</h2>
+        <p class="community-option-description">Chat with other community members individually.</p>
+      </a>
+      <a href="group-calls.html" class="community-option">
+        <h2 class="community-option-title">Group Calls</h2>
+        <p class="community-option-description">Participate in group audio and video calls.</p>
+      </a>
+      <a href="community-feed.html" class="community-option">
+        <h2 class="community-option-title">Community Feed</h2>
+        <p class="community-option-description">Share and engage with posts from the community.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

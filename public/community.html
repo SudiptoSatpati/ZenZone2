@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenZone - Community</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom CSS styles here */
+    body {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #eaf0f6;
+      background-image: url("resource8.avif");
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      background-image: url("resource8.avif");
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .community-section {
+      margin-top: 30px;
+    }
+
+    .community-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .community-section p {
+      margin-bottom: 20px;
+    }
+
+    .community-options {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .community-option-card {
+      max-width: 400px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      background-image: url("resource8.avif");
+    }
+
+    .community-option-card h4 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" style="color: blue;" href="index.html">ZenZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="color: blue;" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="dot-options"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="acheivements.html">Your Achievements</a></li>
+              <li><a class="dropdown-item" href="depression-status.html">Depression Status</a></li>
+              <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+              <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+              <!-- Add more options here -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Community Section -->
+  <div class="container">
+    <div class="community-section">
+      <h2>Community</h2>
+      <p style="color: black;">Welcome to the ZenZone community! Connect with others who are on a similar journey and find support.</p>
+
+      <div class="community-options">
+        <div class="community-option-card">
+          <h4>Join Community</h4>
+          <p>Join the ZenZone community and connect with others. Share your experiences and get support from like-minded
+            individuals.</p>
+          <a href="join_community.html" class="btn btn-primary">Join Now</a>
+        </div>
+
+        <div class="community-option-card">
+          <h4>My Own Space</h4>
+          <p>Create your own personal space within the community. Share your thoughts, achievements, and progress with
+            others.</p>
+          <a href="my_own_space.html" class="btn btn-primary">Go to My Space</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

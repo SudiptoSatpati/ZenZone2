@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenZone - Games</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom CSS styles here */
+    body {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #e0e5ea;
+      background-image: url("resource8.avif");
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+      font-size: 48px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      background-image: url("resource8.avif");
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .game-card {
+      margin-bottom: 20px;
+    }
+
+    .game-card .card-header {
+      background-color: #007bff;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .game-card .card-body {
+      background-color: #fff;
+      background-image: url("resource8.avif");
+    }
+
+    .game-card .card-body .game-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .game-card .card-body .game-description {
+      margin-bottom: 10px;
+    }
+
+    .game-card .card-footer {
+      background-color: #f7c6f4;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" style="color: #007bff;" href="index.html">ZenZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="color: #007bff;" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="dot-options"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="acheivements.html">Your Achievements</a></li>
+              <li><a class="dropdown-item" href="depression-status.html">Depression Status</a></li>
+              <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+              <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+              <!-- Add more options here -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Games Section -->
+  <div class="container">
+    <h2 class="text-center mb-4">Games</h2>
+
+    <div class="game-card">
+      <div class="card-header">
+        Game 1
+      </div>
+      <div class="card-body">
+        <h4 class="game-title">SODOKU</h4>
+        <p class="game-description">Numbers can puzzle you</p>
+      </div>
+      <div class="card-footer">
+        <a href="gameOne.html" class="btn btn-primary">Play Game</a>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <div class="card-header">
+        Game 2
+      </div>
+      <div class="card-body">
+        <h4 class="game-title">CHESS</h4>
+        <p class="game-description">A war between minds</p>
+      </div>
+      <div class="card-footer">
+        <a href="gameTwo.html" class="btn btn-primary">Play Game</a>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <div class="card-header">
+        Game 3
+      </div>
+      <div class="card-body">
+        <h4 class="game-title">LUDO</h4>
+        <p class="game-description">A game of luck</p>
+      </div>
+      <div class="card-footer">
+        <a href="gameThree.html" class="btn btn-primary">Play Game</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

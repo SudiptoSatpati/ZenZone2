@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenZone - Settings</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS styles */
+    body {
+      padding: 20px;
+      background-image: url("bckimg1.avif");
+    }
+
+    .page-title {
+      margin-bottom: 30px;
+    }
+
+    .settings-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    .settings-group {
+      padding: 20px;
+      background-color: #f8f8f8;
+      background-image: url("resource8.avif");
+      border-radius: 8px;
+    }
+
+    .settings-group h4 {
+      margin-bottom: 20px;
+    }
+
+    .settings-item {
+      margin-bottom: 15px;
+    }
+
+    .btn-save {
+      margin-top: 20px;
+    }
+
+    .settings-success {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .settings-error {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .navigation-panel {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .navigation-panel img {
+      height: 40px;
+      width: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="navigation-panel">
+      <img src="logo.png" alt="ZenZone Logo">
+      <a href="home.html">Home</a>
+    </div>
+
+    <h2 class="page-title">Settings</h2>
+
+    <div class="settings-container">
+      <!-- User Info Setting -->
+      <div class="settings-group">
+        <h4>User Info Settings</h4>
+        <div class="settings-item">
+          <label for="username">Username:</label>
+          <input type="text" id="username" class="form-control">
+        </div>
+        <div class="settings-item">
+          <label for="email">Email:</label>
+          <input type="email" id="email" class="form-control">
+        </div>
+        <!-- ... additional user info settings ... -->
+      </div>
+
+      <!-- Privacy Setting -->
+      <!-- Privacy Setting -->
+<div class="settings-group">
+    <h4>Privacy Settings</h4>
+    <div class="settings-item">
+      <label for="public-profile">Public Profile:</label>
+      <input type="checkbox" id="public-profile">
+    </div>
+    <div class="settings-item">
+      <label for="hide-email">Hide Email:</label>
+      <input type="checkbox" id="hide-email">
+    </div>
+    <div class="settings-item">
+      <label for="block-users">Block Users:</label>
+      <textarea id="block-users" class="form-control" rows="4"></textarea>
+    </div>
+    <div class="settings-item">
+      <label for="privacy-level">Privacy Level:</label>
+      <select id="privacy-level" class="form-control">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+    <!-- ... additional privacy settings ... -->
+  </div>
+  
+
+      <!-- Security Setting -->
+<div class="settings-group">
+    <h4>Security Settings</h4>
+    <div class="settings-item">
+      <label for="change-password">Change Password:</label>
+      <input type="password" id="change-password" class="form-control">
+    </div>
+    <div class="settings-item">
+      <label for="two-factor-auth">Two-Factor Authentication:</label>
+      <input type="checkbox" id="two-factor-auth">
+    </div>
+    <div class="settings-item">
+      <label for="login-alerts">Login Alerts:</label>
+      <select id="login-alerts" class="form-control">
+        <option value="none">None</option>
+        <option value="email">Email</option>
+        <option value="sms">SMS</option>
+      </select>
+    </div>
+    <div class="settings-item">
+      <label for="trusted-devices">Trusted Devices:</label>
+      <ul id="trusted-devices" class="list-unstyled">
+        <li>Device 1 <a href="#">Remove</a></li>
+        <li>Device 2 <a href="#">Remove</a></li>
+        <li>Device 3 <a href="#">Remove</a></li>
+      </ul>
+    </div>
+    <!-- ... additional security settings ... -->
+  </div>
+  
+
+      <!-- Device Setting -->
+<div class="settings-group">
+    <h4>Device Settings</h4>
+    <div class="settings-item">
+      <label for="active-devices">Active Devices:</label>
+      <ul id="active-devices" class="list-unstyled">
+        <li>Device 1 <a href="#">Sign Out</a></li>
+        <li>Device 2 <a href="#">Sign Out</a></li>
+        <li>Device 3 <a href="#">Sign Out</a></li>
+      </ul>
+    </div>
+    <div class="settings-item">
+      <label for="device-notifications">Device Notifications:</label>
+      <select id="device-notifications" class="form-control">
+        <option value="none">None</option>
+        <option value="email">Email</option>
+        <option value="push">Push Notifications</option>
+      </select>
+    </div>
+    <div class="settings-item">
+      <label for="device-preferences">Device Preferences:</label>
+      <div id="device-preferences">
+        <input type="checkbox" id="dark-mode">
+        <label for="dark-mode">Dark Mode</label>
+      </div>
+    </div>
+    <!-- ... additional device settings ... -->
+  </div>
+  
+
+      <!-- Notification Setting -->
+<div class="settings-group">
+    <h4>Notification Settings</h4>
+    <div class="settings-item">
+      <label for="email-notifications">Email Notifications:</label>
+      <select id="email-notifications" class="form-control">
+        <option value="all">All</option>
+        <option value="important">Important Only</option>
+        <option value="none">None</option>
+      </select>
+    </div>
+    <div class="settings-item">
+      <label for="push-notifications">Push Notifications:</label>
+      <select id="push-notifications" class="form-control">
+        <option value="enabled">Enabled</option>
+        <option value="disabled">Disabled</option>
+      </select>
+    </div>
+    <div class="settings-item">
+      <label for="notification-sounds">Notification Sounds:</label>
+      <select id="notification-sounds" class="form-control">
+        <option value="default">Default</option>
+        <option value="custom">Custom</option>
+        <option value="none">None</option>
+      </select>
+    </div>
+    <!-- ... additional notification settings ... -->
+  </div>
+  
+
+      <!-- Activity Log Settings -->
+<div class="settings-group">
+    <h4>Activity Log Settings</h4>
+    
+    <div class="settings-item">
+      <label for="activity-tracking">Activity Tracking:</label>
+      <div class="form-check">
+        <input type="checkbox" id="activity-tracking" class="form-check-input">
+        <label for="activity-tracking" class="form-check-label">Enable activity tracking</label>
+      </div>
+    </div>
+  
+    <div class="settings-item">
+      <label for="log-history">Log History:</label>
+      <select id="log-history" class="form-control">
+        <option value="30-days">30 Days</option>
+        <option value="60-days">60 Days</option>
+        <option value="90-days">90 Days</option>
+        <option value="all">All</option>
+      </select>
+    </div>
+  
+    <div class="settings-item">
+      <label for="clear-log">Clear Log:</label>
+      <button id="clear-log" class="btn btn-danger">Clear Activity Log</button>
+    </div>
+  
+    <!-- Additional activity log settings -->
+    
+  </div>
+  
+
+   <!-- Mode Settings -->
+<div class="settings-group">
+    <h4>Mode Settings</h4>
+    
+    <div class="settings-item">
+      <label for="dark-mode">Dark Mode:</label>
+      <div class="form-check">
+        <input type="checkbox" id="dark-mode" class="form-check-input">
+        <label for="dark-mode" class="form-check-label">Enable dark mode</label>
+      </div>
+    </div>
+  
+    <div class="settings-item">
+      <label for="notification-mode">Notification Mode:</label>
+      <select id="notification-mode" class="form-control">
+        <option value="silent">Silent</option>
+        <option value="normal">Normal</option>
+        <option value="priority">Priority</option>
+      </select>
+    </div>
+  
+    <div class="settings-item">
+      <label for="font-size">Font Size:</label>
+      <input type="range" id="font-size" class="form-range" min="10" max="20" step="1">
+    </div>
+  
+    <!-- Additional mode settings -->
+    
+  </div>
+  
+  
+
+    <!-- Additional Settings -->
+  <div class="settings-group">
+    <h4>Additional Settings</h4>
+    
+    <div class="settings-item">
+      <label for="language">Language:</label>
+      <select id="language" class="form-control">
+        <option value="english">English</option>
+        <option value="spanish">Spanish</option>
+        <option value="french">French</option>
+      </select>
+    </div>
+  
+    <div class="settings-item">
+      <label for="timezone">Timezone:</label>
+      <select id="timezone" class="form-control">
+        <option value="utc">UTC</option>
+        <option value="est">EST</option>
+        <option value="pst">PST</option>
+      </select>
+    </div>
+  
+    <div class="settings-item">
+      <label for="email-notifications">Email Notifications:</label>
+      <div class="form-check">
+        <input type="checkbox" id="email-notifications" class="form-check-input">
+        <label for="email-notifications" class="form-check-label">Enable email notifications</label>
+      </div>
+    </div>
+  
+    <div class="settings-item">
+      <label for="theme">Theme:</label>
+      <select id="theme" class="form-control">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="custom">Custom</option>
+      </select>
+    </div>
+  
+    <!-- Add more additional settings -->
+    
+  </div>
+  
+
+    <button class="btn btn-primary btn-save">Save Settings</button>
+    <div id="settingsMessage" class="settings-success"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.btn-save').click(function () {
+        // Perform necessary actions to save settings
+        // ...
+
+        // Show success message
+        $('#settingsMessage').removeClass('settings-error').addClass('settings-success').text('Settings saved successfully.');
+      });
+    });
+  </script>
+</body>
+
+</html>

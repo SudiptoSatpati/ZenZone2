@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <style>
+
+body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+            background-image: url("bckimg1.avif");
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			max-width: 400px;
+			margin: 0 auto;
+			padding: 2rem;
+			background-color: #fff;
+			background-image: url("resource8.avif");
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+		}
+		.container h2 {
+			font-size: 2rem;
+			color: #333;
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
+    .form-group {
+			margin-bottom: 1.5rem;
+		}
+		.form-group label {
+			font-size: 1.2rem;
+			color: #333;
+			display: block;
+			margin-bottom: 0.5rem;
+		}
+		.form-group input[type="text"],
+		.form-group input[type="password"],
+		.form-group input[type="email"] {
+			width: 100%;
+			padding: 0.5rem;
+			font-size: 1.2rem;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+	  background-image: url("resource8.avif");
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .modal-content button {
+      margin: 10px;
+    }
+    /* ... CSS styles ... */
+
+    .error-message {
+      color: red;
+      font-size: 0.8rem;
+      margin-top: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Register</h2>
+
+    <!-- Register form code goes here -->
+    <form id="registrationForm" onsubmit="return validateForm()" action="registration-success.html">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <div id="usernameError" class="error-message"></div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <div id="emailError" class="error-message"></div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <div id="passwordError" class="error-message"></div>
+      </div>
+      <input type="submit" value="Register" class="button">
+    </form>
+
+    <!-- ... Modal and script code ... -->
+
+    <script>
+      function validateForm() {
+        // Reset previous error messages
+        document.getElementById('usernameError').textContent = '';
+        document.getElementById('emailError').textContent = '';
+        document.getElementById('passwordError').textContent = '';
+
+        // Fetch form values
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        let isValid = true;
+
+        // Check if any field is empty
+        if (username.trim() === '') {
+          document.getElementById('usernameError').textContent = 'Username is required';
+          isValid = false;
+        }
+        if (email.trim() === '') {
+          document.getElementById('emailError').textContent = 'Email is required';
+          isValid = false;
+        }
+        if (password.trim() === '') {
+          document.getElementById('passwordError').textContent = 'Password is required';
+          isValid = false;
+        }
+
+        // Additional validation rules can be added here
+
+        return isValid;
+      }
+    </script>
+
+    <div class="login-link">
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+      <p>Complete your profile: <a href="additional-details.html">Additional Details</a></p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ZenZone Support</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS styles */
+
+    body {
+        background-image: url("bckimg1.avif");
+    }
+
+    .navbar {
+      background-color: #f3eaea;
+      background-image: url("resource8.avif");
+      color: #4c14f3;
+
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #4c14f3;
+      font-size: 48px;
+    }
+
+    .navbar .nav-link {
+      color: #2417e2;
+      font-size: 20px;
+    }
+
+    .support-page {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .option-card {
+      padding: 20px;
+      margin-bottom: 30px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      cursor: pointer;
+      background-image: url("resource8.avif");
+    }
+
+    .option-card:hover {
+      background-color: #f5f5f5;
+      background-image: url("bckimg1.avif");
+    }
+
+    .sub-options-container {
+      margin-top: 20px;
+      display: none;
+    }
+
+    .sub-option-card {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      background-color: rgb(240, 164, 203);
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      padding: 20px;
+      background-color: #fff;
+      background-image: url("resource8.avif");
+      text-align: center;
+      z-index: 9999;
+    }
+
+    .popup img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .popup h3 {
+      margin-bottom: 10px;
+    }
+
+    .popup p {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" style="color: #2417e2;" href="index.html">ZenZone</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="color: #2417e2;" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: #2417e2;" href="signup.html">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: #2417e2;" href="login.html">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: #4c14f3;" href="about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  <div class="support-page">
+    <h1>Support</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="option-card">
+            <h2>Support Groups</h2>
+            <div class="sub-options-container">
+              <div class="sub-option-card">
+                <h3>Depression support Grp</h3>
+                <a href="#">Explore</a>
+              </div>
+              <div class="sub-option-card">
+                <h3>Anxiety and Stress Support Group</h3>
+                <a href="#">Explore</a>
+              </div>
+              <div class="sub-option-card">
+                <h3>Bipolar Disorder Support Group</h3>
+                <a href="#">Explore</a>
+              </div>
+              <div class="sub-option-card">
+                <h3>(PTSD) Support Group</h3>
+                <a href="#">Explore</a>
+              </div>
+              <div class="sub-option-card">
+                <h3>Eating Disorders Support Group</h3>
+                <a href="#">Explore</a>
+              </div>
+              <div class="sub-option-card">
+                <h3>Substance Abuse Recovery Support Group</h3>
+                <a href="#">Explore</a>
+              </div>
+              <!-- Add more group options here -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="option-card">
+            <h2>Expert Help</h2>
+            <div class="sub-options-container">
+              <div class="sub-option-card">
+                <h3>National Suicide Prevention Lifeline <br>9152987821</h3>
+                <a href="https://findahelpline.com/">Explore</a>
+              </div>
+              <div class="sub-option-card">
+                <h3>Crisis Text Line</h3>
+                <a href="https://www.crisistextline.org/">Explore</a>
+              </div>
+              <div class="sub-option-card">
+                <h3>Mental Health Helpline</h3>
+                <a href="https://www.vandrevalafoundation.com/free-counseling">Explore</a>
+              </div>
+              <div class="sub-option-card">
+                <h3>Substance abuse Helpline</h3>
+                <a href="https://indianhelpline.com/de-addiction-helpline">Explore</a>
+              </div>
+              <div class="sub-option-card">
+                <h3>Psychiatrist</h3>
+                <a href="#">Explore</a>
+              </div>
+              <!-- Add more expert options here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup">
+      <img src="support2.jpeg" alt="Group Image">
+      <h3>group name</h3>
+      <p style="color: darkblue; font-weight: bold;">Lets Help Each-Other</p>
+      <a href="#" target="_blank">Learn More</a>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".option-card").click(function() {
+        $(this).find(".sub-options-container").slideDown();
+      });
+
+      $(".sub-option-card").click(function() {
+        const title = $(this).find("h3").text();
+        $(".popup h3").text(title);
+        $(".popup").fadeIn();
+      });
+
+      $(".popup").click(function(e) {
+        if ($(e.target).hasClass("popup")) {
+          $(this).fadeOut();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

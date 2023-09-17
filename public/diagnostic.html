@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenZone - Depression Diagnostic</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom CSS styles here */
+    body {
+      background-color: #f2f2f2;
+      background-image: url("bckimg1.avif");
+
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #f05db0;
+      color: #fff;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      background-image: url("resource8.avif");
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #fff;
+      background-image: url("resource8.avif");
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .question h4 {
+      margin-bottom: 10px;
+    }
+
+    .options label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .result {
+      margin-top: 40px;
+    }
+
+    .result h3 {
+      font-weight: bold;
+    }
+
+    .result p {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">ZenZone</a>
+    </div>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <span class="dot-options"></span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+        <li><a class="dropdown-item" href="acheivements.html">Your Achievements</a></li>
+        <li><a class="dropdown-item" href="depression-status.html">Depression Status</a></li>
+        <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+        <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+        <!-- Add more options here -->
+      </ul>
+    </li>
+  </nav>
+
+  <!-- Diagnostic Questions -->
+  <div class="container">
+    <div class="question">
+      <h4>Question 1:How often do you feel sad or down?</h4>
+      <div class="options">
+        <label><input type="radio" name="question1" value="0"> Not at all</label>
+        <label><input type="radio" name="question1" value="1"> Several days</label>
+        <label><input type="radio" name="question1" value="2"> More than half the days</label>
+        <label><input type="radio" name="question1" value="3"> Nearly every day</label>
+      </div>
+    </div>
+
+    <div class="question">
+        <h4>Question 2: Do you have difficulty sleeping?</h4>
+        <div class="options">
+          <label><input type="radio" name="question2" value="0"> Not at all</label>
+          <label><input type="radio" name="question2" value="1"> Several days</label>
+          <label><input type="radio" name="question2" value="2"> More than half the days</label>
+          <label><input type="radio" name="question2" value="3"> Nearly every day</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <h4>Question 3: Do you experience loss of interest or pleasure in activities?</h4>
+        <div class="options">
+          <label><input type="radio" name="question3" value="0"> Not at all</label>
+          <label><input type="radio" name="question3" value="1"> Several days</label>
+          <label><input type="radio" name="question3" value="2"> More than half the days</label>
+          <label><input type="radio" name="question3" value="3"> Nearly every day</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <h4>Question 4: Do you have difficulty concentrating or making decisions?</h4>
+        <div class="options">
+          <label><input type="radio" name="question4" value="0"> Not at all</label>
+          <label><input type="radio" name="question4" value="1"> Several days</label>
+          <label><input type="radio" name="question4" value="2"> More than half the days</label>
+          <label><input type="radio" name="question4" value="3"> Nearly every day</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <h4>Question 5: Do you have changes in appetite or weight?</h4>
+        <div class="options">
+          <label><input type="radio" name="question5" value="0"> Not at all</label>
+          <label><input type="radio" name="question5" value="1"> Several days</label>
+          <label><input type="radio" name="question5" value="2"> More than half the days</label>
+          <label><input type="radio" name="question5" value="3"> Nearly every day</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <h4>Question 6: Do you experience feelings of guilt or worthlessness?</h4>
+        <div class="options">
+          <label><input type="radio" name="question6" value="0"> Not at all</label>
+          <label><input type="radio" name="question6" value="1"> Several days</label>
+          <label><input type="radio" name="question6" value="2"> More than half the days</label>
+          <label><input type="radio" name="question6" value="3"> Nearly every day</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <h4>Question 7: Do you experience fatigue or loss of energy?</h4>
+        <div class="options">
+          <label><input type="radio" name="question7" value="0"> Not at all</label>
+          <label><input type="radio" name="question7" value="1"> Several days</label>
+          <label><input type="radio" name="question7" value="2"> More than half the days</label>
+          <label><input type="radio" name="question7" value="3"> Nearly every day</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <h4>Question 8:Do you have thoughts of death or suicide?</h4>
+        <div class="options">
+          <label><input type="radio" name="question8" value="0"> Not at all</label>
+          <label><input type="radio" name="question8" value="1"> Several days</label>
+          <label><input type="radio" name="question8" value="2"> More than half the days</label>
+          <label><input type="radio" name="question8" value="3"> Nearly every day</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <h4>Question 9: Do you experience restlessness or irritability?</h4>
+        <div class="options">
+          <label><input type="radio" name="question9" value="0"> Not at all</label>
+          <label><input type="radio" name="question9" value="1"> Several days</label>
+          <label><input type="radio" name="question9" value="2"> More than half the days</label>
+          <label><input type="radio" name="question9" value="3"> Nearly every day</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <h4>Question 10: Have you noticed a decreased interest in sex?</h4>
+        <div class="options">
+          <label><input type="radio" name="question10" value="0"> Not at all</label>
+          <label><input type="radio" name="question10" value="1"> Several days</label>
+          <label><input type="radio" name="question10" value="2"> More than half the days</label>
+          <label><input type="radio" name="question10" value="3"> Nearly every day</label>
+        </div>
+    </div>
+
+    <!-- Repeat the above code for the remaining 9 questions -->
+
+    <button class="btn btn-primary" onclick="submitForm()">Submit</button>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script>
+    function submitForm() {
+      const selectedOptions = document.querySelectorAll('input[name^="question"]:checked');
+
+      if (selectedOptions.length === 10) {
+        const responses = Array.from(selectedOptions).map(option => Number(option.value));
+
+        const totalScore = responses.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+        let severityLevel = '';
+        let advice = '';
+        if (totalScore >= 0 && totalScore <= 4) {
+          severityLevel = 'Minimal depression';
+          advice = 'Stay physically active, eat a balanced diet and do things you enjoy'
+        } else if (totalScore >= 5 && totalScore <= 9) {
+          severityLevel = 'Mild depression';
+          advice = 'Nothing to worry about, we will fight it out'
+        } else if (totalScore >= 10 && totalScore <= 14) {
+          severityLevel = 'Moderate depression';
+          advice = 'Get a Healthy life style and a partner who is a good doctor '
+        } else if (totalScore >= 15 && totalScore <= 19) {
+          severityLevel = 'Moderately severe depression';
+          advice = 'This is serious now, go see a doctor '
+        } else {
+          severityLevel = 'Severe depression';
+          advice = 'This is fucked up buddy. You are fighter. Need immediate attention .'
+        }
+
+        const resultText = `Based on your responses, your depression level is: ${severityLevel}`;
+        localStorage.setItem('diagnosticResult', resultText);
+        localStorage.setItem('advice', advice);
+        window.location.href = 'result.html';
+      } else {
+        alert('Please answer all the questions before submitting.');
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenZone - Depression Status</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS styles */
+    /* Add your custom styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #e7ecf1;
+      background-image: url("resource8.avif");
+      color: #421de7;
+      padding: 10px;
+    }
+
+    .navbar-brand {
+      font-size: 48px;
+      color: #4517ec;
+      font-weight: bold;
+    }
+
+    .container {
+      margin-top: 20px;
+    }
+
+    .status-card {
+      background-color: #fff;
+      background-image: url("resource8.avif");
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .status-card h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .status-card p {
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .status-card .status-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .status-label{
+        font-weight: bold;
+        color: #421de7;
+    }
+
+    .status-card .status-item .status-label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .status-card .status-item .status-value {
+      font-weight: normal;
+    }
+    .questionnaire > p {
+        font-weight: bold;
+    }
+    .form-control{
+        background-image: url("resource8.avif");
+    }
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a class="navbar-brand" style="color: #421de7;" href="index.html">ZenZone</a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" style="color: #421de7;" href="home.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #421de7;" href="support.html">Support</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #421de7;" href="logout.html">Logout</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="questionnaire">
+      <h3 style="font-weight: bold;">Depression Status Questionnaire</h3>
+      <p style="color: #421de7;" >Please answer the following questions:</p>
+
+      <form id="question-form">
+        <div class="form-group">
+          <label for="mood" >Mood:</label>
+          <select class="form-control" id="mood">
+            <option value="Very Low">Very Low</option>
+            <option value="Low">Low</option>
+            <option value="Neutral">Neutral</option>
+            <option value="High">High</option>
+            <option value="Very High">Very High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="energy">Energy Level:</label>
+          <select class="form-control" id="energy">
+            <option value="Very Low">Very Low</option>
+            <option value="low">Low</option>
+            <option value="Neutral">Neutral</option>
+            <option value="High">High</option>
+            <option value="Very High">Very High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sleep">Sleep Quality:</label>
+          <select class="form-control" id="sleep">
+            <option value="Very Poor">Very Poor</option>
+            <option value="Poor">Poor</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Good">Good</option>
+            <option value="Very Good">Very Good</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="appetite">Appetite:</label>
+          <select class="form-control" id="appetite">
+            <option value="Very Poor">Very Poor</option>
+            <option value="Poor">Poor</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Good">Good</option>
+            <option value="Very Good">Very Good</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="motivation">Motivation:</label>
+          <select class="form-control" id="motivation">
+            <option value="Very Low">Very Low</option>
+            <option value="Low">Low</option>
+            <option value="Neutral">Neutral</option>
+            <option value="High">High</option>
+            <option value="Very High">Very High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="thoughts">Thoughts:</label>
+          <select class="form-control" id="thoughts">
+            <option value="Very Negative">Very Negative</option>
+            <option value="Negative">Negative</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Posetive">Positive</option>
+            <option value="Very Posetive">Very Positive</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="interactions">Social Interactions:</label>
+          <select class="form-control" id="interactions">
+            <option value="Very Low">Very Low</option>
+            <option value="Low">Low</option>
+            <option value="Neutral">Neutral</option>
+            <option value="High">High</option>
+            <option value="Very High">Very High</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+   
+        <h1>Depression Status</h1>
+        <div class="status-card">
+          <div class="status-item">
+            <span class="status-label">Mood:</span>
+            <span class="status-value" id="mood-value">-</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">Energy Level:</span>
+            <span class="status-value" id="energy-value">-</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">Sleep Quality:</span>
+            <span class="status-value" id="sleep-value">-</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">Appetite:</span>
+            <span class="status-value" id="appetite-value">-</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">Motivation:</span>
+            <span class="status-value" id="motivation-value">-</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">Thoughts:</span>
+            <span class="status-value" id="thoughts-value">-</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">Social Interactions:</span>
+            <span class="status-value" id="interactions-value">-</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">Last Updated:</span>
+            <span class="status-value" id="updated-value">-</span>
+          </div>
+        </div>
+    </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script>
+    document.getElementById('question-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Get user's answers from the form
+      const mood = document.getElementById('mood').value;
+      const energy = document.getElementById('energy').value;
+      const sleep = document.getElementById('sleep').value;
+      const appetite = document.getElementById('appetite').value;
+      const motivation = document.getElementById('motivation').value;
+      const thoughts = document.getElementById('thoughts').value;
+      const interactions = document.getElementById('interactions').value;
+
+      // Generate the status card based on the user's answers
+      const statusCard = `
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Depression Status Card</h5>
+            <p class="card-text">Mood: ${mood}</p>
+            <p class="card-text">Energy Level: ${energy}</p>
+            <p class="card-text">Sleep Quality: ${sleep}</p>
+            <p class="card-text">Appetite: ${appetite}</p>
+            <p class="card-text">Motivation: ${motivation}</p>
+            <p class="card-text">Thoughts: ${thoughts}</p>
+            <p class="card-text">Social Interactions: ${interactions}</p>
+            <p class="card-text">Last Updated: ${new Date().toLocaleString()}</p>
+            <a href="#" class="btn btn-primary" id="download-btn">Download</a>
+          </div>
+        </div>
+      `;
+
+      // Display the status card on the page
+      const statusContainer = document.querySelector('.status-card');
+      statusContainer.innerHTML = statusCard;
+
+      // Add event listener to the download button
+      const downloadBtn = document.getElementById('download-btn');
+      downloadBtn.addEventListener('click', function () {
+        const cardData = statusContainer.outerHTML;
+        const blob = new Blob([cardData], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'depression_status.html';
+        link.click();
+        URL.revokeObjectURL(url);
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ZenZone - Log Out</title>
+  <!-- Add CSS link for Bootstrap or include the Bootstrap CSS directly -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS for the Log Out page */
+    body {
+      padding: 20px;
+      background-image: url("bckimg1.avif");
+    }
+    .navbar {
+        background-image: url("resource8.avif");
+    }
+    .back-btn {
+      margin-bottom: 20px;
+      background-color: blue;
+    }
+    .last-login {
+      margin-bottom: 20px;
+      background-color: #f0f0f0;
+    }
+    .activities {
+      margin-bottom: 20px;
+      background-color: #f0f0f0;
+    }
+    .logout-confirm {
+      margin-bottom: 20px;
+    }
+    .activity-map {
+      margin-top: 30px;
+    }
+    .activity-map .map-item {
+      display: inline-block;
+      margin-right: 10px;
+      width: 50px;
+      height: 50px;
+      background-color: #f0f0f0;
+      background-image: url("resource8.avif");
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">ZenZone</a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" style="color: blue;" href="home.html">Back</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2 style="font-weight: bold;">Log Out</h2>
+    
+    <div class="last-login">
+      <h4>Last Logged In:</h4>
+      <p id="last-login-time"></p>
+    </div>
+    
+    <div class="last-activity">
+      <h4>Last 1 Hour Activities:</h4>
+      <ul id="activity-list">
+        <li style="color: blue;">attended group call</li>
+        <li style="color: blue;">read resources</li>
+        <li style="color: blue;">used my diary</li>
+        <!-- Add more activities -->
+      </ul>
+    </div>
+    
+    <div class="logout-confirm">
+      <h4>Are you sure you want to log out?</h4>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-danger" onclick="showRandomImage()">Yes</button>
+        <button type="button" class="btn btn-secondary" onclick="goBack()">No</button>
+      </div>
+    </div>
+    
+    <div id="random-image-container" style="display: none;">
+      <h4>Random Image:</h4>
+      <img id="random-image" src="" alt="Random Image">
+      <h4>Inspiring Message:</h4>
+      <p id="inspiring-message"></p>
+    </div>
+
+    <div class="activity-map">
+      <h4>Activity Map:</h4>
+      <div class="map-item">A</div>
+      <div class="map-item">B</div>
+      <div class="map-item">C</div>
+      <div class="map-item">D</div>
+      <div class="map-item">E</div>
+      <!-- Add more activity map items -->
+    </div>
+  </div>
+
+  <script>
+    // Get the last login time
+    var lastLoginTime = getLastLoginTime();
+    document.getElementById("last-login-time").textContent = "Logged in: " + lastLoginTime;
+
+    // Log out the user
+    function logOut() {
+      // Perform log out functionality
+      // Redirect to the index page
+      window.location.href = "index.html";
+    }
+
+    // Go back to the home page
+    function goBack() {
+      // Redirect to the home page
+      window.location.href = "home.html";
+    }
+
+    // Function to get the last login time (replace with your own implementation)
+    function getLastLoginTime() {
+      // This is a placeholder function, replace it with your own logic to get the last login time
+      return "3 hours ago";
+    }
+
+    // Function to show a random image and inspiring message
+    function showRandomImage() {
+      var imageUrl = getRandomImage();
+      var inspiringMessage = getInspiringMessage();
+
+      // Open a new pop-up window
+      var popupWindow = window.open("", "Random Image", "width=400,height=400");
+
+      // Build the HTML content for the pop-up window
+      var content = "<h2>Random Image</h2>";
+      content += "<img src='" + imageUrl + "' alt='Random Image'>";
+      content += "<h2>Inspiring Message</h2>";
+      content += "<p>" + inspiringMessage + "</p>";
+
+      // Set the HTML content of the pop-up window
+      popupWindow.document.body.innerHTML = content;
+
+      // Redirect to the home page after a delay (in this case, 5 seconds)
+      setTimeout(function() {
+        window.location.href = "index.html";
+      }, 5000);
+    }
+
+    // Function to retrieve a random image URL
+    function getRandomImage() {
+      // Replace this logic with code to fetch a random image URL from the internet
+      // Here's an example of generating a random image URL using Lorem Picsum service
+      var randomId = Math.floor(Math.random() * 1000);
+      return "https://picsum.photos/id/" + randomId + "/200/300";
+    }
+
+    // Function to retrieve an inspiring message
+    function getInspiringMessage() {
+      // Replace this logic with code to fetch an inspiring message from the internet
+      // Here's an example of returning a random message from an array
+      var messages = [
+        "You are capable of amazing things!",
+        "Believe in yourself and all that you are.",
+        "The future belongs to those who believe in the beauty of their dreams.",
+        "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+        "You are never too old to set another goal or to dream a new dream."
+      ];
+      var randomIndex = Math.floor(Math.random() * messages.length);
+      return messages[randomIndex];
+    }
+  </script>
+</body>
+</html>

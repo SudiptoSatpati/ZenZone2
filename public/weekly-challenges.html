@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenZone - Weekly Challenges</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom CSS styles here */
+    body {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #e7ecf2;
+      background-image: url("resource8.avif");
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+      font-size: 48px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      background-image: url("resource8.avif");
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .challenge-card {
+      margin-bottom: 20px;
+    }
+
+    .challenge-card .card-header {
+      background-color: #007bff;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .challenge-card .card-body {
+      background-color: #fff;
+      background-image: url("resource8.avif");
+    }
+
+    .challenge-card .card-body .challenge-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .challenge-card .card-body .challenge-steps li {
+      margin-bottom: 10px;
+    }
+
+    .challenge-card .card-footer {
+      background-color: #95c6f7;
+    }
+
+    .challenge-card .card-footer .btn {
+      margin-right: 10px;
+    }
+
+    .trophy-animation {
+      display: none;
+      width: 100px;
+      height: 100px;
+      background-image: url('resource13.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 20px auto;
+    }
+
+    .reward-title {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" style="color: #007bff;" href="index.html">ZenZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="color: #007bff;" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="dot-options"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="acheivements.html">Your Achievements</a></li>
+              <li><a class="dropdown-item" href="depression-status.html">Depression Status</a></li>
+              <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+              <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+              <!-- Add more options here -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Weekly Challenges Section -->
+  <div class="container">
+    <h2 class="text-center mb-4">Weekly Challenges</h2>
+
+    <div class="challenge-card">
+      <div class="card-header">
+        Challenge 1
+      </div>
+      <div class="card-body">
+        <h4 class="challenge-title">Warm UP</h4>
+        <ul class="challenge-steps">
+          <li>Practice deep breathing exercises for 10 minutes daily.</li>
+          <li>Engage in a physical activity you enjoy for at least 30 minutes each day.</li>
+          <li>Write down three things you are grateful for every night before bed.</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary">Complete Challenge</button>
+      </div>
+    </div>
+
+    <div class="challenge-card">
+      <div class="card-header">
+        Challenge 2
+      </div>
+      <div class="card-body">
+        <h4 class="challenge-title">Bonding</h4>
+        <ul class="challenge-steps">
+          <li>Reach out to a close friend or family member and share how you're feeling.</li>
+          <li>Create a positive affirmations list and read it aloud every morning.</li>
+          <li>Practice mindfulness meditation for 15 minutes daily.</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary">Complete Challenge</button>
+      </div>
+    </div>
+
+    <div class="challenge-card">
+      <div class="card-header">
+        Challenge 3
+      </div>
+      <div class="card-body">
+        <h4 class="challenge-title">Lets Feel Better</h4>
+        <ul class="challenge-steps">
+          <li>Avoid negative self-talk and replace it with positive affirmations.</li>
+          <li>Engage in a hobby or activity that brings you joy for at least 1 hour each day.</li>
+          <li>Practice relaxation techniques, such as progressive muscle relaxation or guided imagery.</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary">Complete Challenge</button>
+      </div>
+    </div>
+
+    <div class="challenge-card">
+      <div class="card-header">
+        Challenge 4
+      </div>
+      <div class="card-body">
+        <h4 class="challenge-title">Bring Posetivity</h4>
+        <ul class="challenge-steps">
+          <li>Create a daily self-care routine and stick to it.</li>
+          <li>Engage in activities that promote relaxation, such as taking a bath or practicing yoga.</li>
+          <li>Challenge negative thoughts by reframing them with positive and realistic alternatives.</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary">Complete Challenge</button>
+      </div>
+    </div>
+
+    <div class="trophy-animation" id="trophyAnimation"></div>
+    <h3 class="reward-title" id="rewardTitle"></h3>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script>
+    // function completeChallenge() {
+    //   const challengeCard = this.closest('.challenge-card');
+
+    //   if (!challengeCard.classList.contains('complete')) {
+    //     challengeCard.classList.add('complete');
+
+    //     // Check if all challenges are completed
+    //     const allChallengesComplete = document.querySelectorAll('.challenge-card:not(.complete)').length === 0;
+
+    //     if (allChallengesComplete) {
+    //       showReward();
+    //     }
+    //   } else {
+    //     challengeCard.classList.remove('complete');
+    //   }
+    // }
+
+    function completeChallenge() {
+  const challengeCard = this.closest('.challenge-card');
+  const completeButton = challengeCard.querySelector('.btn-primary');
+
+  if (!challengeCard.classList.contains('complete')) {
+    challengeCard.classList.add('complete');
+    completeButton.textContent = 'Completed';
+    const allChallengesComplete = document.querySelectorAll('.challenge-card:not(.complete)').length === 0;
+
+    if (allChallengesComplete) {
+       showReward();
+    }
+  } else {
+    challengeCard.classList.remove('complete');
+    completeButton.textContent = 'Complete Challenge';
+  }
+}
+
+
+    function showReward() {
+      const trophyAnimation = document.getElementById('trophyAnimation');
+      const rewardTitle = document.getElementById('rewardTitle');
+
+      trophyAnimation.style.display = 'block';
+      rewardTitle.textContent = 'Congratulations! You have completed all challenges for this month.';
+
+      // Add additional logic for awarding points or titles
+    }
+
+    const challengeButtons = document.querySelectorAll('.btn-primary');
+    challengeButtons.forEach(button => {
+      button.addEventListener('click', completeChallenge);
+    });
+  </script>
+</body>
+
+</html>

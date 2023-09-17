@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ZenZone - Inspiring Stories</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: url("bckimg1.avif");
+    }
+    .navbar {
+      background-color: #e1e4eb;
+      background-image: url("resource8.avif");
+    }
+
+    .navbar-brand {
+      color: #520df4;
+      font-size: 48px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #3f14e9;
+      font-size: 20px;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      background-image: url("resource8.avif");
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .inspiring-stories-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .inspiring-story {
+      width: 200px;
+      height: 200px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      margin: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .inspiring-story img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .inspiring-story .story-details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 1;
+    }
+
+    .inspiring-story:hover .story-details {
+      opacity: 1;
+    }
+
+    .inspiring-story h2 {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .inspiring-story a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .inspiring-story a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">ZenZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="dot-options"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="acheivements.html">Your Achievements</a></li>
+              <li><a class="dropdown-item" href="depression-status.html">Depression Status</a></li>
+              <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+              <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+              <!-- Add more options here -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="inspiring-stories-container">
+    <div class="inspiring-story">
+      <img src="story1.webp" alt="Story 1">
+      <div class="story-details">
+        <h2>Lili Reinhart</h2>
+        <p>Lili Reinhart is getting real about her body image and mental health <a href="https://people.com/health/lili-reinhart-gets-vulnerable-about-struggle-with-body-image/#:~:text=In%20May%202021%2C%20the%20star,%2C%20it%20can%20feel%20intolerable.%22" style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="inspiring-story">
+      <img src="story2.jpg" alt="Story 2">
+      <div class="story-details">
+        <h2>Miley Cyrus</h2>
+        <p>We all know her as an outgoing and controversial twerkmeister but it seems Miley Cyrus has gone through some tough times behind the scenes.<a href="https://www.her.ie/celeb/my-dad-had-to-break-my-door-down-miley-cyrus-reveals-her-battle-with-depression-124890#:~:text=%22I%20went%20through%20a%20time,really%20bullied%20because%20of%20that." style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="inspiring-story">
+      <img src="story3.jpeg" alt="Story 3">
+      <div class="story-details">
+        <h2>Jared Padalecki</h2>
+        <p> ON the set of the sci-fi show “Supernatural,” star Jared Padalecki had an anxiety attack. He was told he had clinical depression.<a href="https://edition.cnn.com/2015/07/29/health/jared-padalecki-depression-charity-feat/index.html#:~:text=Seven%20years%20ago%2C%20on%20the,told%20he%20had%20clinical%20depression." style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="inspiring-story">
+      <img src="story4.jpg" alt="Story 4">
+      <div class="story-details">
+        <h2>Lady Gaga</h2>
+        <p>Lady Gaga says her depression played a pivotal part in the making of her most recent album, “Chromatica.” <a href="https://www.today.com/popculture/lady-gaga-reveals-how-depression-influenced-new-album-t191884" style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="inspiring-story">
+      <img src="story5.jpg" alt="Story 5">s
+      <div class="story-details">
+        <h2>Sarah Silverman</h2>
+        <p>Sarah Silverman Opens Up About Depression, Comedy And Troublemaking <a href="https://www.npr.org/sections/health-shots/2015/10/22/450830121/sarah-silverman-opens-up-about-depression-comedy-and-troublemaking" style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="inspiring-story">
+      <img src="story6.jpg" alt="Story 6">s
+      <div class="story-details">
+        <h2>Cara Delevingne</h2>
+        <p>The model and actor Cara Delevingne has said the depression she suffered as a teenager left her feeling alienated and suicidal.<a href="https://www.theguardian.com/fashion/2017/sep/29/cara-delevingne-talks-about-depression-and-alienation-in-interview" style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="inspiring-story">
+      <img src="story7.jpeg" alt="Story 7">s
+      <div class="story-details">
+        <h2>Jon Hamm</h2>
+        <p>I know in England you say ‘therapy’ and people are like, ‘Woah, are you OK?’ But here it’s like going to the dentist.<a href="https://www.theguardian.com/global/2017/jun/18/jon-hamm-therapy-is-like-going-to-the-dentiststyle=" style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="inspiring-story">
+      <img src="story8.jpeg" alt="Story 8">s
+      <div class="story-details">
+        <h2> Owen Wilson</h2>
+        <p>Owen Wilson Says His Brother Andrew Helped Him Get Back on His Feet After 2007 Suicide Attempt.<a href="https://www.vanityfair.com/style/2021/08/owen-wilson-brother-andrew-helped-after-2007-suicide-attempt-mental-health-grateful-lucky" style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="inspiring-story">
+      <img src="story9.webp" alt="Story 9">s
+      <div class="story-details">
+        <h2>Demi Lovato</h2>
+        <p>“What I can say is that I was depressed,” Lovato reveals about her state of mind.<a href="https://www.npr.org/sections/health-shots/2015/10/22/450830121/sarah-silverman-opens-up-about-depression-comedy-and-troublemaking" style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="inspiring-story">
+      <img src="story10.jpeg" alt="Story 10">s
+      <div class="story-details">
+        <h2>Kerry Washington</h2>
+        <p>Kerry Washington candidly details mental health struggles.<a href="https://www.hellomagazine.com/healthandbeauty/health-and-fitness/20221115157085/kerry-washington-debilitating-mental-health-struggles-revealed/" style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="inspiring-story">
+      <img src="story11.jpeg" alt="Story 11">s
+      <div class="story-details">
+        <h2>Sheryl Crow</h2>
+        <p>Crow then said she fell into a "serious depression."<a href="https://www.cbsnews.com/news/sheryl-crow-documentary-film-career-singer-songwriter/" style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+    
+    <div class="inspiring-story">
+      <img src="story12.jpeg" alt="Story 12">s
+      <div class="story-details">
+        <h2>Dwayne ‘The Rock’ Johnson</h2>
+        <p>The Rock reveals how he beat years of depression<a href="https://www.cnbc.com/2018/04/03/dwayne-the-rock-johnson-reveals-how-he-beat-years-of-depression.html" style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="inspiring-story">
+      <img src="story13.jpeg" alt="Story 13">s
+      <div class="story-details">
+        <h2>Neal Brennan</h2>
+        <p>Comedian Neal Brennan Talks Depression and How TMS Therapy Helped<a href="https://www.greenbrooktms.com/blog/comedian-neal-brennan-talks-depression-and-how-tms-therapy-helped" style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="inspiring-story">
+      <img src="story14.jpeg" alt="Story 14">s
+      <div class="story-details">
+        <h2>Kristen Bell</h2>
+        <p>‘I don’t wait for those things to find me:’ How actress Kristen Bell combats her anxiety and depression at work<a href="https://www.cnbc.com/2021/08/14/actress-kristen-bell-on-mental-health-anxiety-and-depression-at-work.html" style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="inspiring-story">
+      <img src="story15.jpg" alt="Story 15">s
+      <div class="story-details">
+        <h2>Wayne Brady</h2>
+        <p>The longtime actor and comedian says his journey toward mental wellness started with his family.<a href="https://www.parents.com/wayne-brady-opens-about-his-mental-health-struggles-as-a-black-parent-6833771#:~:text=He%20says%20that%20in%20his,I've%20always%20been%20depressed." style="color: crimson;">Read more</a></p>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

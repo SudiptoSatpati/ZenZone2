@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenZone - Goals</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom CSS styles here */
+    body {
+      background-color: #f9f4f4;
+      background-image: url("bckimg1.avif");
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .navbar {
+      background-color: #efe9e9;
+      background-image: url("resource8.avif");
+      border-bottom: 1px solid #333;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+      font-size: 48px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      background-image: url("resource8.avif");
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+  .form-control {
+    color: #f8f0f0;
+  }
+
+    .goals-page {
+      margin-top: 30px;
+    }
+
+    .goals-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .goals-title {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .goals-subtitle {
+      font-size: 18px;
+      color: #121111;
+    }
+
+    .goals-form {
+      margin-top: 20px;
+    }
+
+    .goals-form label {
+      font-weight: bold;
+      color: #0e0e0e;
+    }
+
+    .goals-form input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #333;
+      background-color: #faf5f5;
+      color: #100f0f;
+    }
+
+    .goals-form button {
+      margin-top: 10px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .goals-list {
+      margin-top: 30px;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .goal-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #f3c5dc;
+      border-radius: 5px;
+    }
+
+    .goal-item .goal-text {
+      flex-grow: 1;
+      margin-left: 10px;
+      color: #111010;
+    }
+
+    .goal-item .goal-actions {
+      display: flex;
+      gap: 5px;
+    }
+
+    .goal-item .goal-actions button {
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #e422b1;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .goal-item.completed {
+      background-color: #007bff;
+    }
+
+    .goal-item.completed .goal-text {
+      text-decoration: line-through;
+    }
+
+    @media (max-width: 576px) {
+      .container {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" style="color: #007bff;" href="index.html">ZenZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="color: #007bff;" href="home.html">Home</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="dot-options"></span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                <li><a class="dropdown-item" href="acheivements.html">Your Achievements</a></li>
+                <li><a class="dropdown-item" href="depression-status.html">Depression Status</a></li>
+                <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+                <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+                <!-- Add more options here -->
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="goals-page">
+      <div class="goals-header">
+        <h1 class="goals-title">Goals</h1>
+        <p class="goals-subtitle">Set and track your goals.</p>
+      </div>
+
+      <div class="goals-form">
+        <form id="goals-form">
+          <div class="mb-3">
+            <label for="goal-input" class="form-label">New Goal:</label>
+            <input type="text" class="form-control" id="goal-input" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Goal</button>
+        </form>
+      </div>
+
+      <ul class="goals-list" id="goals-list">
+        <!-- Goals will be dynamically added here -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script>
+    const goalsForm = document.getElementById('goals-form');
+    const goalsList = document.getElementById('goals-list');
+
+    goalsForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const goalInput = document.getElementById('goal-input');
+      const goalText = goalInput.value;
+
+      if (goalText.trim() !== '') {
+        const goalItem = createGoalItem(goalText);
+        goalsList.appendChild(goalItem);
+
+        goalInput.value = '';
+      }
+    });
+
+    function createGoalItem(goalText) {
+      const goalItem = document.createElement('li');
+      goalItem.classList.add('goal-item');
+
+      const goalCheckbox = document.createElement('input');
+      goalCheckbox.setAttribute('type', 'checkbox');
+      goalCheckbox.classList.add('goal-checkbox');
+      goalItem.appendChild(goalCheckbox);
+
+      const goalTextElem = document.createElement('span');
+      goalTextElem.classList.add('goal-text');
+      goalTextElem.textContent = goalText;
+      goalItem.appendChild(goalTextElem);
+
+      const goalActions = document.createElement('div');
+      goalActions.classList.add('goal-actions');
+
+      const deleteButton = document.createElement('button');
+      deleteButton.classList.add('btn', 'btn-danger');
+      deleteButton.textContent = 'Delete';
+      deleteButton.addEventListener('click', () => {
+        goalItem.remove();
+      });
+      goalActions.appendChild(deleteButton);
+
+      goalItem.appendChild(goalActions);
+
+      return goalItem;
+    }
+  </script>
+</body>
+
+</html>

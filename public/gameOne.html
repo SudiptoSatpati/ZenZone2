@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenZone - Sudoku</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom CSS styles here */
+    body {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #edf2f7;
+      background-image: url("resource8.avif");
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      background-image: url("resource8.avif");
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .card-body{
+        background-image: url("resource8.avif");
+    }
+
+    .sudoku-facts {
+      margin-top: 30px;
+      background-image: url("resource8.avif");
+    }
+
+    .sudoku-facts h2 {
+      margin-bottom: 20px;
+    }
+
+    .sudoku-facts ul {
+      padding-left: 20px;
+    }
+
+    .sudoku-facts ul li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" style="color: rgb(59, 47, 237);" href="index.html">ZenZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="color: rgb(73, 39, 242);" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="dot-options"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="acheivements.html">Your Achievements</a></li>
+              <li><a class="dropdown-item" href="depression-status.html">Depression Status</a></li>
+              <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+              <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+              <!-- Add more options here -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sudoku Section -->
+  <div class="container">
+    <h2 class="text-center mb-4">Sudoku</h2>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h4 class="card-title">Play Sudoku</h4>
+        <p class="card-text">Challenge your mind with Sudoku puzzles.</p>
+        <a href="https://sudoku.com/" class="btn btn-primary">Play Now</a>
+      </div>
+    </div>
+
+    <div class="sudoku-facts">
+      <h2>Facts About Sudoku</h2>
+      <ul>
+        <li>Sudoku is a logic-based number placement puzzle.</li>
+        <li>The objective is to fill a 9x9 grid with digits so that each column, each row, and each of the nine 3x3
+          subgrids contains all of the digits from 1 to 9.</li>
+        <li>Sudoku puzzles became popular internationally in the late 20th century.</li>
+        <li>The modern Sudoku was most likely designed by American puzzle maker Howard Garns in 1979.</li>
+        <li>It gained significant popularity in Japan in the 1980s before spreading worldwide.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

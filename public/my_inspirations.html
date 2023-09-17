@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspiration</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .navbar {
+      background-color: #fff;
+      background-image: url("resource8.avif");
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 48px;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      background-image: url("resource8.avif");
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .inspiration-page {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      background-image: url("resource8.avif");
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .inspiration-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .inspiration-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #121111;
+    }
+
+    .inspiration-subtitle {
+      font-size: 16px;
+      color: #101010;
+    }
+
+    .inspiration-form {
+      margin-bottom: 30px;
+    }
+
+    .form-label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .form-control {
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: #f8f9fa;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .inspiration-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .inspiration-item {
+      margin-bottom: 15px;
+      padding: 15px;
+      background-color: #e7bddf;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .inspiration-text {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #0a0a0a;
+    }
+
+    .inspiration-actions {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .btn-danger {
+      background-color: #e40fa4;
+      border-color: #dc3545;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" style="color: #007bff;" href="index.html">ZenZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="dot-options"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="acheivements.html">Your Achievements</a></li>
+              <li><a class="dropdown-item" href="depression-status.html">Depression Status</a></li>
+              <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+              <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+              <!-- Add more options here -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Inspiration Page Content -->
+  <div class="container inspiration-page">
+    <div class="inspiration-header">
+      <h1 class="inspiration-title">Inspiration</h1>
+      <p class="inspiration-subtitle">Save and collect inspiring quotes, images, or articles that uplift your mood and
+        motivate you.</p>
+    </div>
+
+    <div class="inspiration-form">
+      <div class="mb-3">
+        <label class="form-label" for="inspiration-input">Add Inspiration:</label>
+        <input type="text" class="form-control" id="inspiration-input" placeholder="Enter inspiration">
+      </div>
+      <button class="btn btn-primary" id="save-inspiration-btn">Save</button>
+    </div>
+
+    <ul class="inspiration-list" id="inspiration-list">
+      <!-- Saved Inspirations will be dynamically added here -->
+    </ul>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+    // Get inspiration input and save button elements
+    const inspirationInput = document.getElementById('inspiration-input');
+    const saveInspirationBtn = document.getElementById('save-inspiration-btn');
+    // Get inspiration list element
+    const inspirationList = document.getElementById('inspiration-list');
+
+    // Add event listener to the save button
+    saveInspirationBtn.addEventListener('click', () => {
+      const inspirationText = inspirationInput.value;
+      if (inspirationText) {
+        const inspirationItem = createInspirationItem(inspirationText);
+        inspirationList.appendChild(inspirationItem);
+        inspirationInput.value = '';
+      }
+    });
+
+    // Function to create a new inspiration item
+    function createInspirationItem(inspirationText) {
+      const inspirationItem = document.createElement('li');
+      inspirationItem.classList.add('inspiration-item');
+
+      const inspirationTextElement = document.createElement('p');
+      inspirationTextElement.classList.add('inspiration-text');
+      inspirationTextElement.innerText = inspirationText;
+      inspirationItem.appendChild(inspirationTextElement);
+
+      const inspirationActions = document.createElement('div');
+      inspirationActions.classList.add('inspiration-actions');
+
+      const deleteButton = document.createElement('button');
+      deleteButton.classList.add('btn', 'btn-danger');
+      deleteButton.innerText = 'Delete';
+      deleteButton.addEventListener('click', () => {
+        inspirationItem.remove();
+      });
+      inspirationActions.appendChild(deleteButton);
+
+      inspirationItem.appendChild(inspirationActions);
+
+      return inspirationItem;
+    }
+  </script>
+</body>
+
+</html>

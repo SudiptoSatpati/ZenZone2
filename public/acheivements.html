@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Achievements - ZenZone</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS styles */
+
+    body {
+        background-image: url("bckimg1.avif");
+    }
+
+    .navbar {
+      background-color: #ebeff4;
+      background-image: url("resource8.avif");
+      color: #ffffff;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #4214ea;
+      font-size: 48px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #5718ea;
+      font-size: 20px;
+    }
+
+    .achievement-card {
+      background-color: #f5dcf2;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .achievement-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .achievement-description {
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      height: 20px;
+    }
+  </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css">
+    </head>
+    <body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" style="color: #4214ea;" href="index.html">ZenZone</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="color: #4214ea;" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #4214ea;" href="profile.html">Profile</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>User Achievements</h1>
+
+    <div class="achievement-card">
+      <h2 class="achievement-title">Daily Tasks Completed</h2>
+      <p class="achievement-description">You have completed 5 out of 7 daily tasks.</p>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 71%;" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+
+    <div class="achievement-card">
+      <h2 class="achievement-title">Weekly Tasks Completed</h2>
+      <p class="achievement-description">You have completed 3 out of 5 weekly tasks.</p>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+
+    <div class="achievement-card">
+      <h2 class="achievement-title">Group Calls</h2>
+      <p class="achievement-description">You have participated in 8 group calls.</p>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+
+    <div class="achievement-card">
+      <h2 class="achievement-title">Individual Messages</h2>
+      <p class="achievement-description">You have sent/received 50 individual messages.</p>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+
+    <div class="achievement-card">
+      <h2 class="achievement-title">Overall Progress</h2>
+      <p class="achievement-description">You have made significant progress in your wellness journey.</p>
+
+      <div class="graph-container">
+        <!-- Add your graph code here -->
+        <canvas id="progressChart"></canvas>
+        <p>Graph showing overall progress comparing previous months</p>
+      </div>
+    </div>
+
+    <div class="achievement-card">
+        <h2 class="achievement-title">Depression Status</h2>
+        <div class="depression-status-dropdown">
+          <select class="form-control">
+            <option>Stable</option>
+            <option>Improving</option>
+            <option>Worsening</option>
+            <option>Neutral</option>
+          </select>
+        </div>
+      </div>
+
+    <!-- <div class="achievement-card">
+      <h2 class="achievement-title">Depression Status</h2>
+      <p class="achievement-description">Your depression status is currently stable.</p>
+    </div> -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.bundle.min.js"></script>
+<script>
+  // Get the canvas element
+  var progressChart = document.getElementById("progressChart").getContext("2d");
+
+  // Create the chart
+  var chart = new Chart(progressChart, {
+    type: "line",
+    data: {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      datasets: [
+        {
+          label: "Progress",
+          data: [20, 32, 38, 58, 62, 70],
+          backgroundColor: "rgba(79, 93, 117, 0.2)",
+          borderColor: "rgba(79, 93, 117, 1)",
+          borderWidth: 2,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100,
+          ticks: {
+            stepSize: 20,
+          },
+        },
+      },
+    },
+  });
+</script>
+
+</body>
+</html>

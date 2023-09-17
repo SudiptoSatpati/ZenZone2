@@ -1,0 +1,102 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('bckimg1.avif'); /* Add your background image path */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Navigation Styles */
+.navbar {
+  background-color: #1026cc;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #4c12d3;
+}
+
+/* Hero Section Styles */
+.hero {
+  /*background-color: rgba(255, 255, 255, 0.5); /* Add transparency to the background color */
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 48px;
+  color: #1b56d7;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  color: #04020f;
+}
+
+/* Resources Section Styles */
+.resources {
+  padding: 50px 0;
+}
+
+.resources h2 {
+  font-size: 36px;
+  color: #161616;
+  margin-bottom: 30px;
+}
+
+.card {
+  margin-bottom: 30px;
+  background-color: #fff;
+  background-image: url("resource8.avif");
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #666;
+}
+
+.btn-primary {
+  background-color: #ff6b6b; /* Change the primary button color */
+  border-color: #ff6b6b;
+}
+
+.btn-primary:hover {
+  background-color: #ff4949; /* Change the primary button hover color */
+  border-color: #ff4949;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+

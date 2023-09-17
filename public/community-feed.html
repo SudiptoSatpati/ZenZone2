@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <style>
+    body {
+        background-image: url("bckimg1.avif");
+    }
+    .navbar {
+      background-color: #eef1f8;
+      background-image: url("resource8.avif");
+    }
+
+    .navbar-brand {
+      color: #090909;
+      font-size: 24px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #0b0a0a;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      background-image: url("resource8.avif");
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .card {
+      margin-bottom: 20px;
+      background-image: url("resource8.avif");
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+    }
+
+    .card-header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .card-footer button {
+      margin-right: 10px;
+    }
+
+    .card-footer button i {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">ZenZone</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="dot-options"></span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                <li><a class="dropdown-item" href="acheivements.html">Your Achievements</a></li>
+                <li><a class="dropdown-item" href="depression-status.html">Depression Status</a></li>
+                <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+                <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+                <!-- Add more options here -->
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+  <div class="container">
+    <h1>Community Feed</h1>
+
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <img src="avatar1.avif" alt="User Profile">
+            <h5 class="mb-0">A.Einstein</h5>
+          </div>
+          <div class="card-body">
+            <p>Time is not constant guyzzzz</p>
+            <img src="photo1.jpg" alt="Photo" class="w-100">
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-heart"></i> Like</button>
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-chat-dots"></i> Comment</button>
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-share"></i> Share</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <img src="avatar2.avif" alt="User Profile">
+            <h5 class="mb-0">Elon Musk</h5>
+          </div>
+          <div class="card-body">
+            <p>Guys we will built earth on Mars,, Mars is our new earth</p>
+            <img src="photo2.jpg" alt="Photo" class="w-100">
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-heart"></i> Like</button>
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-chat-dots"></i> Comment</button>
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-share"></i> Share</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <img src="avatar3.png" alt="User Profile">
+            <h5 class="mb-0">Rick</h5>
+          </div>
+          <div class="card-body">
+            <p>Mortyyyyyyyyyyyyyyyyyyyyyyyyyyy whyyyyyyyyy?????!!!!</p>
+            <img src="photo3.jpeg" alt="Photo" class="w-100">
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-heart"></i> Like</button>
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-chat-dots"></i> Comment</button>
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-share"></i> Share</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <img src="avatar4.jpeg" alt="User Profile">
+            <h5 class="mb-0">Tony Stark</h5>
+          </div>
+          <div class="card-body">
+            <p>I am IRONMAN.</p>
+            <img src="photo4.jpg" alt="Photo" class="w-100">
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-heart"></i> Like</button>
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-chat-dots"></i> Comment</button>
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-share"></i> Share</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <img src="avatar5.jpeg" alt="User Profile">
+            <h5 class="mb-0">Adolf Hitler</h5>
+          </div>
+          <div class="card-body">
+            <p>shitttttttttt !!!!</p>
+            <img src="photo5.webp" alt="Photo" class="w-100">
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-heart"></i> Like</button>
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-chat-dots"></i> Comment</button>
+            <button class="btn btn-sm btn-outline-primary"><i class="bi bi-share"></i> Share</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

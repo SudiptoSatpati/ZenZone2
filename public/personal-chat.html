@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Chat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <style>
+
+    body {
+        background-image: url("bckimg1.avif");
+    }
+    .navbar {
+      background-color: #e2e7ec;
+      background-image: url("resource8.avif");
+      color: #fff;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-size: 48px;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      background-image: url("resource8.avif");
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .chat-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .profile-box {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      background-image: url("resource8.avif");
+    }
+
+    .profile-box:hover {
+      background-color: #f8f9fa;
+    }
+
+    .profile-box-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .profile-box-info {
+      flex: 1;
+    }
+
+    .profile-box-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .profile-box-status {
+      color: gray;
+    }
+
+    .chat-box {
+      display: none;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 20px;
+      padding: 20px;
+      background-image: url("resource8.avif");
+    }
+
+    .chat-box-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .chat-box-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .chat-box-messages {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .chat-box-message {
+      margin-bottom: 10px;
+    }
+
+    .sender {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .message {
+      margin: 0;
+    }
+
+    .message-input {
+      margin-top: 20px;
+      display: flex;
+    }
+
+    .message-input input[type="text"] {
+      flex: 1;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .message-input button {
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" style="color: #007bff;" href="index.html">ZenZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" style="color: #007bff;" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="dot-options"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="acheivements.html">Your Achievements</a></li>
+              <li><a class="dropdown-item" href="depression-status.html">Depression Status</a></li>
+              <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+              <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+              <!-- Add more options here -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="chat-container">
+    <h2>Personal Chat</h2>
+    <div class="profile-box" id="Mr Einstein">
+      <img src="avatar1.avif" alt="Avatar" class="profile-box-avatar">
+      <div class="profile-box-info">
+        <h4 class="profile-box-name">Mr Einstein</h4>
+        <p class="profile-box-status">Online</p>
+      </div>
+    </div>
+    <div class="profile-box" id="jane-smith">
+      <img src="avatar2.avif" alt="Avatar" class="profile-box-avatar">
+      <div class="profile-box-info">
+        <h4 class="profile-box-name">Elon MUsk</h4>
+        <p class="profile-box-status">Offline</p>
+      </div>
+    </div>
+    <div class="profile-box" id="mike-johnson">
+      <img src="avatar3.png" alt="Avatar" class="profile-box-avatar">
+      <div class="profile-box-info">
+        <h4 class="profile-box-name">Rick</h4>
+        <p class="profile-box-status">Online</p>
+      </div>
+    </div>
+
+    <div class="chat-box">
+      <div class="chat-box-header">
+        <h2 class="chat-box-title"></h2>
+      </div>
+      <ul class="chat-box-messages">
+      </ul>
+      <div class="message-input">
+        <input type="text" id="message-input" placeholder="Type your message">
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const profileBoxes = document.querySelectorAll('.profile-box');
+    const chatBox = document.querySelector('.chat-box');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+    const chatBoxMessages = document.querySelector('.chat-box-messages');
+
+    profileBoxes.forEach(profileBox => {
+      profileBox.addEventListener('click', () => {
+        const username = profileBox.querySelector('.profile-box-name').textContent;
+        const chatBoxTitle = document.querySelector('.chat-box-title');
+        chatBoxTitle.textContent = username;
+        chatBox.style.display = 'block';
+      });
+    });
+
+    sendButton.addEventListener('click', () => {
+      const message = messageInput.value;
+      if (message.trim() !== '') {
+        const chatBoxMessage = document.createElement('li');
+        chatBoxMessage.classList.add('chat-box-message');
+        chatBoxMessage.innerHTML = `
+          <p class="sender">You</p>
+          <p class="message">${message}</p>
+        `;
+        chatBoxMessages.appendChild(chatBoxMessage);
+        messageInput.value = '';
+      }
+    });
+  </script>
+</body>
+
+</html>

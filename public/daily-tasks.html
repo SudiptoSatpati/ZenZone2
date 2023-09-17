@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenZone - Daily Tasks</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom CSS styles here */
+    body {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #d5d9dc;
+      background-image: url("resource8.avif");
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-size: 48px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-size: 28px;
+    }
+
+    .dropdown-menu {
+      min-width: 160px;
+      background-image: url("resource8.avif");
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      background-image: url("bckimg1.avif");
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .task-card {
+      margin-bottom: 20px;
+      background-image: url("resource8.avif");
+    }
+
+    .task-card .card-header {
+      background-color: #007bff;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .task-card .card-body {
+      background-color: #fff;
+      background-image: url("resource8.avif");
+    }
+
+    .task-card .card-body .task-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .task-card .card-body .task-item .task-checkbox {
+      margin-right: 10px;
+    }
+
+    .task-card .card-body .task-item .task-label {
+      flex-grow: 1;
+    }
+
+    .task-card .card-footer {
+      background-color: #b4d3f3;
+    }
+
+    .task-card .card-footer .btn {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" style="color: #007bff;" href="index.html">ZenZone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="color: #007bff;" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="dot-options"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+              <li><a class="dropdown-item" href="acheivements.html">Your Achievements</a></li>
+              <li><a class="dropdown-item" href="depression-status.html">Depression Status</a></li>
+              <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+              <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+              <!-- Add more options here -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Daily Tasks Section -->
+  <div class="container">
+    <h2 class="text-center mb-4">Daily Tasks</h2>
+
+    <div class="task-card">
+      <div class="card-header">
+        Month: June
+      </div>
+      <div class="card-body">
+        <div class="task-item">
+          <input type="checkbox" class="task-checkbox" id="task1">
+          <label for="task1" class="task-label">Wake up at 6 O'clock and go to bed at 10 at night</label>
+        </div>
+        <div class="task-item">
+          <input type="checkbox" class="task-checkbox" id="task2">
+          <label for="task2" class="task-label">Practice meditation for 10 minutes</label>
+        </div>
+        <!-- Add more tasks for each day of the month -->
+        <!-- Example for days 3 to 30 -->
+        <div class="task-item">
+          <input type="checkbox" class="task-checkbox" id="task3">
+          <label for="task3" class="task-label">Go to morning walk and cover 10000 steps</label>
+        </div>
+        <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task4">
+            <label for="task4" class="task-label">Write down 3 things you are grateful for</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task5">
+            <label for="task5" class="task-label">Have your favourite breakfast to cheer your mood</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task6">
+            <label for="task6" class="task-label">Set a small acheivable goal for the day</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task7">
+            <label for="task7" class="task-label">Spend 1 hour in nature</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task8">
+            <label for="task8" class="task-label">Have a conversation with someone for a long time who is close to you</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task9">
+            <label for="task9" class="task-label">try to learn a new instrument or plan an instrument you know</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task10">
+            <label for="task10" class="task-label">Listen to your favourite music for sometime</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task11">
+            <label for="task11" class="task-label">Motivate your self </label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task12">
+            <label for="task12" class="task-label">Challenge negative thoughts by replacing them with positive affirmations</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task13">
+            <label for="task13" class="task-label">Take breaks throughout the day to relax and recharge.</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task14">
+            <label for="task14" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task15">
+            <label for="task15" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task16">
+            <label for="task16" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task17">
+            <label for="task17" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task18">
+            <label for="task18" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task19">
+            <label for="task19" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task20">
+            <label for="task20" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task21">
+            <label for="task21" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task22">
+            <label for="task22" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task22">
+            <label for="task22" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task23">
+            <label for="task23" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task24">
+            <label for="task24" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task25">
+            <label for="task25" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task26">
+            <label for="task26" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task27">
+            <label for="task27" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task28">
+            <label for="task28" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task29">
+            <label for="task29" class="task-label">Task 3</label>
+          </div>
+          <div class="task-item">
+            <input type="checkbox" class="task-checkbox" id="task30">
+            <label for="task30" class="task-label">Task 3</label>
+          </div>
+            
+          
+        <!-- Repeat the above task-item div for days 4 to 30 -->
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary">Save</button>
+        <button class="btn btn-secondary">Reset</button>
+      </div>
+    </div>
+
+    <div class="task-card">
+      <div class="card-header">
+        Monthly Score
+      </div>
+      <div class="card-body">
+        <p>Completed Tasks: <span id="completedTasks">0</span></p>
+        <p>Total Tasks: <span id="totalTasks">30</span></p>
+        <p>Monthly Score: <span id="monthlyScore">0%</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script>
+    // Calculate monthly score
+    function calculateMonthlyScore() {
+      const totalTasks = 30;
+      const completedTasks = document.querySelectorAll('.task-checkbox:checked').length;
+      const monthlyScore = Math.floor((completedTasks / totalTasks) * 100);
+      
+      document.getElementById('completedTasks').textContent = completedTasks;
+      document.getElementById('monthlyScore').textContent = monthlyScore + '%';
+    }
+
+    // Event listener for save button
+    document.querySelector('.btn-primary').addEventListener('click', calculateMonthlyScore);
+
+    // Event listener for reset button
+    document.querySelector('.btn-secondary').addEventListener('click', () => {
+      const checkboxes = document.querySelectorAll('.task-checkbox');
+      checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+      });
+      
+      calculateMonthlyScore();
+    });
+  </script>
+</body>
+
+</html>
