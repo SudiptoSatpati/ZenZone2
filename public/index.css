@@ -5,7 +5,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('bckimg1.avif'); /* Add your background image path */
+  background-image: url("bckimg1.avif"); /* Add your background image path */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -100,3 +100,8 @@ body {
   text-align: center;
 }
 
+.btnGet {
+  width: 2rem;
+  height: 1.5rem;
+  border: 2px solid black;
+}
